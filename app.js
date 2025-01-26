@@ -15,7 +15,7 @@ function agregarAmigo(){
 }
 
 function sortearAmigo(){
-   
+   alert("test");
 }
 
 
