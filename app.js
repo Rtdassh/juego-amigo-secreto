@@ -10,8 +10,8 @@ function agregarAmigo(){
         return;
     }
     listadoAmigos.push(inputTextBox);
-    console.log("Amigo añadido: " + inputTextBox);
-    document.getElementById('amigo').value = "";
+    actualizarLista();
+    document.getElementById('amigo').value = "";  
 }
 
 function sortearAmigo(){
@@ -19,8 +19,12 @@ function sortearAmigo(){
 }
 
 
-function asignarTexto(objeto, texto) {
-    let objetoHTML = document.querySelector(objeto);
-    objetoHTML.innerHTML = texto;
-    return;
-}
+function actualizarLista() {
+    const ul = document.getElementById("listaAmigos");
+    ul.innerHTML = "";
+
+    listadoAmigos.forEach((amigo) => {
+        const li = document.createElement("li");
+        li.textContent = amigo;
+        ul.appendChild(li);
+    })}
