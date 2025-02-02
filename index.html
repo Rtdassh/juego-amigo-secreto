@@ -19,7 +19,7 @@
         
         <section class="input-section">
             <h2 class="section-title" id = "main-text">Digite el nombre de sus amigos</h2>
-            <h4 class="section-text" id = "secondary-text">Debe ingresar por lo menos 3 amigos</h4>
+            <h4 class="section-text" id = "secondary-text">Debe ingresar por lo menos 2 amigos</h4>
             <div class="input-wrapper"  id = "ingresar-datos">
                 <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
                 <button class="button-add" onclick="agregarAmigo()">Añadir</button> 
@@ -32,15 +32,15 @@
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
-            <div class="button-container" >
+            <div class="button-container" id = "botonSorteo">
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Comenzar sorteo!
                 </button>
             </div>
 
-            <div class="button-container" >
-                <button class="button-draw" onclick="sortearAmigo()" aria-label="Reiniciar juego" style="display: none;">
+            <div class="button-container" id = "botonReinicio" style="display: none">
+                <button class="button-draw" onclick="reiniciarJuego()" aria-label="Reiniciar juego">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Reiniciar juego
                 </button>
