@@ -70,6 +70,15 @@ body {
     text-align: center;
 }
 
+.section-text {
+    font-family: "Inter", serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
 /* Contenedores de entrada y botón */
 .input-wrapper {
     display: flex;
@@ -104,6 +113,7 @@ body {
     font-family: "Merriweather", serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Estilos de botón */
 button {
