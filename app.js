@@ -41,6 +41,16 @@ function activarSorteo() {
 }
 
 function sortearAmigo() {
+    
+    activarSorteo();
+    if(amigoSorteado === null){
+        do {
+            amigoSorteado = listadoAmigos[Math.floor(Math.random() * listadoAmigos.length)];
+        } while (listadoAmigosSorteados.includes(amigoSorteado));
+    
+        listadoAmigosSorteados.push(amigoSorteado); 
+    } else alert("Ya se ha sorteado un amigo");
+    
     if (listadoAmigos.length < 2) {
         alert("Debes ingresar al menos dos amigos para sortear.");
         return;
@@ -51,15 +61,6 @@ function sortearAmigo() {
         return;
     }
 
-    activarSorteo();
-    if(amigoSorteado === null){
-        do {
-            amigoSorteado = listadoAmigos[Math.floor(Math.random() * listadoAmigos.length)];
-        } while (listadoAmigosSorteados.includes(amigoSorteado));
-    
-        listadoAmigosSorteados.push(amigoSorteado); 
-    } else alert("Ya se ha sorteado un amigo");
-    
 }
 
 function verificarIntento() {
